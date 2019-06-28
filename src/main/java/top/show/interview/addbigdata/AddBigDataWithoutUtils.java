@@ -9,6 +9,7 @@ import java.math.BigInteger;
  * 要求：不能使用BigInteger和BigDecimal等工具类
  * example:2.445463423254543435 + 56.563423422362723423235
  * 思路：将位数搞成一致，逐位相加
+ *
  * @author 吴启欢
  * @version 1.0
  * @date 19-6-27 上午11:37
@@ -25,13 +26,10 @@ public class AddBigDataWithoutUtils {
      * @param b 参数
      * @return 相加后的结果
      */
-    public static String add(String a, String b) {
+    private static String add(String a, String b) {
         StringBuilder sb = new StringBuilder(a);
         StringBuilder sb1 = new StringBuilder(b);
         boolean havePointer = false;
-        /*
-         * 判断是否有小数点
-         */
         String pointer = ".";
         if (sb.indexOf(pointer) > 0) {
             if (sb1.indexOf(pointer) < 0) {
@@ -43,7 +41,6 @@ public class AddBigDataWithoutUtils {
             if (sb.indexOf(pointer) < 0) {
                 sb.append(pointer);
             }
-            //如果有小数点
             havePointer = true;
         }
         if (havePointer) {
@@ -95,8 +92,12 @@ public class AddBigDataWithoutUtils {
                 temp += 1;
             }
             if (temp >= 10) {
-                stringBuilder.append(String.valueOf(temp).substring(1));
-                overTen = true;
+                if (i == 0) {
+                    stringBuilder.append(temp);
+                } else {
+                    stringBuilder.append(String.valueOf(temp).substring(1));
+                    overTen = true;
+                }
             } else {
                 stringBuilder.append(temp);
                 overTen = false;
@@ -107,8 +108,9 @@ public class AddBigDataWithoutUtils {
 
     public static void main(String[] args) {
         System.out.println(add("3.4353535324234252352342", "4.646343"));
-        System.out.println(add("3435353532523","1111111111119"));
-        System.out.println(add("23423.62324234","1111111111111"));
+        System.out.println(add("3435353532523", "1111111111119"));
+        System.out.println(add("23423.62324234", "1111111111111"));
+        System.out.println(add("99999", "11111"));
 
     }
 
