@@ -110,7 +110,7 @@ public class AddBigDataWithoutUtils {
         System.out.println(add("3.4353535324234252352342", "4.646343"));
         System.out.println(add("3435353532523", "1111111111119"));
         System.out.println(add("23423.62324234", "1111111111111"));
-        System.out.println(add("99999", "11111"));
+        System.out.println(add("98999", "11111"));
 
     }
 
