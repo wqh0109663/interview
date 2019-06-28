@@ -1,11 +1,11 @@
-package service;
+package first.service;
 
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.IAtom;
 import com.jfinal.plugin.activerecord.Record;
-import model.LogUser;
-import model.TUser;
-import model.User;
+import first.model.LogUser;
+import first.model.TUser;
+import first.model.User;
 
 import java.sql.SQLException;
 

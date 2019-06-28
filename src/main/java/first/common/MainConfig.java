@@ -1,15 +1,15 @@
-package common;
+package first.common;
 
 import com.jfinal.config.*;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
-import controller.LoginContraler;
-import controller.RegisterController;
-import controller.TestController;
-import model.LogUser;
-import model.TUser;
-import model.User;
+import first.controller.LoginContraler;
+import first.controller.RegisterController;
+import first.controller.TestController;
+import first.model.LogUser;
+import first.model.TUser;
+import first.model.User;
 
 /**
  * @author wqh

@@ -1,8 +1,8 @@
-package controller;
+package first.controller;
 
 import com.jfinal.core.Controller;
-import model.User;
-import service.UserService;
+import first.model.User;
+import first.service.UserService;
 
 /**
  * @author wqh

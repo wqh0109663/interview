@@ -1,4 +1,4 @@
-package model;
+package first.model;
 
 
 import com.jfinal.kit.StrKit;

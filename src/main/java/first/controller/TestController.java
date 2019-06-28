@@ -1,4 +1,4 @@
-package controller;
+package first.controller;
 
 import com.jfinal.core.Controller;
 
