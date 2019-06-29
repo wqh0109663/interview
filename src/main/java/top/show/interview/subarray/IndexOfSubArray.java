@@ -19,7 +19,7 @@ public class IndexOfSubArray {
      */
     public static int sub(int[] a, int[] b) {
         if (a == null || a.length <= 0) {
-            throw new RuntimeException("非法参数");
+            return -1;
         }
         if (b == null || b.length <= 0) {
             return -1;
